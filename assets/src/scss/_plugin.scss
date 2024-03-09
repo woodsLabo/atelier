@@ -2,16 +2,38 @@
 
 .mw_wp_form {
   .label {
-    font-size: 1.5rem;
+    font-size: 2rem;
     font-weight: bold;
     margin-bottom: 0.5rem;
+
+    span {
+      color: #f00;
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
   }
 
   .name,
   .mail,
-  .tel {
+  .tel,
+  .company,
+  .type {
     margin-bottom: 2rem;
     width: 100%;
+  }
+
+  .type {
+    font-size: 1.8rem;
+
+    input {
+      margin: 0;
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
   }
 
   .message {

@@ -124,7 +124,8 @@ input, select {
   vertical-align: middle;
 }
 
-input {
+input[type=text],
+input[type=email] {
   margin: 0;
   padding: 1rem;
   background: #fff;
@@ -171,15 +172,33 @@ input {
 }
 
 .mw_wp_form .label {
-  font-size: 1.5rem;
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
+.mw_wp_form .label span {
+  color: #f00;
+  display: inline-block;
+  font-size: 1.5rem;
+  margin-left: 1rem;
+}
 .mw_wp_form .name,
 .mw_wp_form .mail,
-.mw_wp_form .tel {
+.mw_wp_form .tel,
+.mw_wp_form .company,
+.mw_wp_form .type {
   margin-bottom: 2rem;
   width: 100%;
+}
+.mw_wp_form .type {
+  font-size: 1.8rem;
+}
+.mw_wp_form .type input {
+  margin: 0;
+}
+.mw_wp_form .type span {
+  display: inline-block;
+  vertical-align: middle;
 }
 .mw_wp_form .message {
   border-radius: 1rem;

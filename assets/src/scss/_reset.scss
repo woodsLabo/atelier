@@ -117,7 +117,8 @@ input, select {
   vertical-align: middle;
 }
 
-input {
+input[type="text"],
+input[type="email"] {
   margin: 0;
   padding: 1rem;
   background: #fff;
