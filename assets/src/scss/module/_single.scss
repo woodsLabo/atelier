@@ -22,21 +22,29 @@ $mainColor: #28253c;
     display: flex;
     gap: 1rem;
     justify-content: space-between;
-    margin-bottom: 10rem;;
+    margin-bottom: 10rem;
   }
 
   &__image {
     &Wrap {
-      display: flex;
+      // display: flex;
       width: calc(45% - 1rem);
     }
 
     &Thumb {
+      &List {
+        display: flex;
+        gap: 2rem;
+      }
+
       &Item {
         cursor: pointer;
         height: 90px;
-        margin-bottom: 2rem;
         width: 90px;
+
+        img {
+          border-radius: 50%;
+        }
       }
 
       &Main {
@@ -57,6 +65,7 @@ $mainColor: #28253c;
     }
 
     &Header {
+      align-items: flex-end;
       display: flex;
       gap: 1rem;
     }
@@ -87,8 +96,7 @@ $mainColor: #28253c;
       &List {
         display: flex;
         gap: 1rem;
-        margin-left: auto;
-        margin-top: 1rem;
+        margin: 1rem 0 0.2rem auto;
       }
 
       &Item {
@@ -100,13 +108,17 @@ $mainColor: #28253c;
     }
 
     &MainWrap {
-      box-shadow: 0 0 0 5px rgba(43, 40, 69, 0.5);
+      box-shadow: 0 0 0 5px rgba(123, 28, 77, 0.5);
       box-sizing: border-box;
       color: $mainColor;
       margin: 1rem 0 4rem;
       padding: 2rem 1rem;
       transform: translate(0.8rem, 0);
-      width: calc(100% - 1.8rem);
+      width: calc(100% - 0.8rem);
+
+      .is--flan & {
+        box-shadow: 0 0 0 5px rgba(0, 206, 209, 0.5);
+      }
     }
 
     &Position {
@@ -117,7 +129,7 @@ $mainColor: #28253c;
 
     &Comment {
       font-weight: bold;
-      margin-bottom: 3rem;;
+      margin-bottom: 3rem;
     }
 
     &List {
@@ -127,8 +139,8 @@ $mainColor: #28253c;
 
       &Wrap {
         display: flex;
-        gap: 2rem;
         flex-wrap: wrap;
+        gap: 2rem;
       }
     }
 
@@ -145,11 +157,15 @@ $mainColor: #28253c;
     }
 
     &Pickup {
-      box-shadow: 0 0 0 5px rgba(43, 40, 69, 0.5);
+      box-shadow: 0 0 0 5px rgba(123, 28, 77, 0.5);
       padding: 2rem 1rem;
       text-align: center;
       transform: translate(0.8rem, 0);
-      width: calc(100% - 1.8rem);
+      width: calc(100% - 0.8rem);
+
+      .is--flan & {
+        box-shadow: 0 0 0 5px rgba(0, 206, 209, 0.5);
+      }
 
       &Title {
         color: #fff;

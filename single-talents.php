@@ -1,11 +1,16 @@
 <?php get_header(); ?>
 <?php include_once("_templates/breadcrumb.php"); ?>
 
-<?php while ( have_posts() ) : the_post();	?>
+<?php
+	while ( have_posts() ) : the_post();
+	$talent_type = post_custom('name_en') == "Flan Eclair" ? " is--flan" : "";
+
+?>
+
 <section class="detail__wrap">
 	<div class="detail__inner">
 		<div class="detail__imageWrap">
-			<ul class="detail__imageThubmList">
+			<ul class="detail__imageThumbList">
 				<?php
 					$images = SCF::get("images");
 					foreach($images as $index => $image) :
@@ -17,11 +22,10 @@
 						<p class="detail__imageThumbMain js-imageMain"><?= $change_img[0]; ?></p>
 					</li>
 				<?php endforeach; ?>
-				<li class="detail__imageThumbVoice"><img src="<?= get_template_directory_uri(); ?>/assets/src/images/voice.png" alt=""></li>
 			</ul>
 			<div class="detail__imageItem js-imageItem"><img src="<?= wp_get_attachment_url($main_image); ?>" alt=""></div>
 		 </div>
-		<div class="detail__profileWrap">
+		<div class="detail__profileWrap<?= $talent_type; ?>">
 			<div class="detail__profileHeader">
 				<span class="detail__profileIcon"><?= wp_get_attachment_image(post_custom("item_icon"), "thumb"); ?></span>
 				<div class="detail__profileNameWrap">
