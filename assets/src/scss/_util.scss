@@ -1,0 +1,10 @@
+@mixin section_title() {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+
+@mixin inner() {
+  margin: 0 auto;
+  width: 120rem;
+}

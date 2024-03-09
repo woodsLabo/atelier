@@ -1,0 +1,61 @@
+@use "../_util" as *;
+
+.header {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  &__inner {
+    @include inner();
+
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0;
+  }
+
+  &__title {
+    font-size: 0;
+    width: 180px;
+
+    img {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    margin-left: auto;
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+
+    li {
+      &:hover {
+        border-bottom: 3px solid #000;
+      }
+    }
+
+    a {
+      color: #191919;
+      text-decoration: none;
+
+      :active {
+        color: #191919;
+      }
+    }
+  }
+
+
+  // TODO: 要調整
+  &__snsWrap {
+    img {
+      width: 15px;
+      height: auto;
+    }
+  }
+}

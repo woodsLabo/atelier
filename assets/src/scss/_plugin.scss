@@ -1,0 +1,45 @@
+@use "./_util" as *;
+
+.mw_wp_form {
+  .label {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+
+  .name,
+  .mail,
+  .tel {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .message {
+    border-radius: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .submit {
+    background: linear-gradient(to right, rgb(5, 14 , 142), rgb(15, 74, 256));
+    border: 0;
+    border-radius: 4rem;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem 4rem;
+  }
+}
+
+.breadcrumbs {
+  padding-top: 10rem;
+
+  &__inner {
+    @include inner();
+
+    padding: 1rem 0;
+  }
+}
