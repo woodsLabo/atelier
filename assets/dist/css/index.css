@@ -12,6 +12,7 @@
 @charset "UTF-8";
 html {
   font-size: 62.5%;
+  scroll-padding-top: 85px;
 }
 
 html.wf-active,
@@ -344,6 +345,39 @@ input[type=email] {
   margin-bottom: 1rem;
   transition: all ease 0.5s;
   width: 100%;
+}
+
+.goods__wrap {
+  margin-bottom: 8rem;
+}
+.goods__title {
+  font-size: 3rem;
+  margin-bottom: 2rem;
+  text-align: center;
+}
+.goods__item {
+  cursor: pointer;
+  width: calc((100% - 10rem) / 3);
+}
+.goods__item a {
+  color: #191919;
+  text-decoration: none;
+}
+.goods__item a:active {
+  color: #191919;
+}
+.goods__item:hover img {
+  opacity: 0.8;
+}
+.goods__item img {
+  height: auto;
+  margin-bottom: 1rem;
+  transition: all ease 0.5s;
+  width: 100%;
+}
+.goods__moreLink {
+  margin-top: 2rem;
+  text-align: right;
 }
 
 .contact__title {

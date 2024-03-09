@@ -77,13 +77,22 @@ $mainColor: #28253c;
     &Name {
       font-size: 4rem;
       line-height: 1.2;
-      text-shadow: 1px 0 #000, -1px 0 #000, 0 -1px #000, 0 1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 3px 5px 0 $mainColor;
+      text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 5px 0 #2b2845;
+
+      .is--flan & {
+        text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 5px 0 #191970;
+
+      }
 
       &--en {
         font-family: "Reem Kufi", sans-serif;
         font-size: 2rem;
         line-height: 1;
-        text-shadow: 1px 0 #000, -1px 0 #000, 0 -1px #000, 0 1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000;
+        text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845;
+
+        .is--flan & {
+          text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970;
+        }
       }
 
       &Wrap {
@@ -110,7 +119,7 @@ $mainColor: #28253c;
     &MainWrap {
       box-shadow: 0 0 0 5px rgba(123, 28, 77, 0.5);
       box-sizing: border-box;
-      color: $mainColor;
+      color: #333;
       margin: 1rem 0 4rem;
       padding: 2rem 1rem;
       transform: translate(0.8rem, 0);
@@ -150,6 +159,10 @@ $mainColor: #28253c;
       font-weight: bold;
       padding: 1rem 0;
       text-align: center;
+
+      .is--flan & {
+        background: #1c1861;
+      }
     }
 
     &Desc {
@@ -170,8 +183,13 @@ $mainColor: #28253c;
       &Title {
         color: #fff;
         font-size: 3rem;
-        margin-bottom: 2rem;;
-        text-shadow: 1px 0 #000, -1px 0 #000, 0 -1px #000, 0 1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 1px 1px #000, -1px 1px #000, 1px -1px #000, -1px -1px #000, 3px 4px 0 $mainColor;
+        margin-bottom: 2rem;
+          text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 4px 0 #2b2845;
+
+        .is--flan & {
+          text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 4px 0 #191970;
+
+        }
       }
     }
   }
