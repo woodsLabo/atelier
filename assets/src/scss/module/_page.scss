@@ -1,0 +1,19 @@
+.link {
+  &__list {
+    list-style-type: none;
+  }
+
+  &__item {
+    &:not(:last-of-type) {
+      margin-bottom: 4rem;
+    }
+
+    a {
+      display: block;
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

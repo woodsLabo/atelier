@@ -30,7 +30,9 @@ function addHeadAssets() {
 	} elseif (is_archive()) {
 		wp_enqueue_style("archive", get_template_directory_uri() . "/assets/dist/css/archive.css");
 	} elseif (is_single()) {
-		wp_enqueue_style("index", get_template_directory_uri() . "/assets/dist/css/single.css");
+		wp_enqueue_style("single", get_template_directory_uri() . "/assets/dist/css/single.css");
+	} elseif (is_page()) {
+		wp_enqueue_style("page", get_template_directory_uri() . "/assets/dist/css/page.css");
 	}
 }
 add_action("wp_enqueue_scripts", "addHeadAssets");

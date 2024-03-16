@@ -8,6 +8,7 @@ module.exports = {
     "index": path.resolve(__dirname, "./assets/src/scss/index.scss"),
     "archive": path.resolve(__dirname, "./assets/src/scss/archive.scss"),
     "single": path.resolve(__dirname, "./assets/src/scss/single.scss"),
+    "page": path.resolve(__dirname, "./assets/src/scss/page.scss"),
   },
   output: {
     path: path.resolve(__dirname, "./assets/dist/"),

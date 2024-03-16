@@ -148,6 +148,11 @@ input[type=email] {
   clear: none;
 }
 
+img {
+  max-width: 100%;
+  vertical-align: top;
+}
+
 .main {
   background: rgba(204, 204, 204, 0.3);
   padding: 15rem 0;
