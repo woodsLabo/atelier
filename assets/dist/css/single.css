@@ -44,8 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   /*word-break:break-all;*/
-  color: #3e3e3e;
-  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "Lato JP", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 100;
@@ -164,6 +164,11 @@ img {
   background: rgba(204, 204, 204, 0.3);
   padding: 15rem 0 10rem;
 }
+@media screen and (max-width: 599px) {
+  .main {
+    padding: 11rem 0 3rem;
+  }
+}
 .main__image {
   margin-bottom: 5rem;
 }
@@ -177,7 +182,7 @@ img {
 
 .inner {
   margin: 0 auto;
-  width: 850px;
+  width: min(95%, 850px);
 }
 
 .archive__wrap {
@@ -217,6 +222,12 @@ img {
 .wpcf7-form .type .wpcf7-list-item.first {
   margin-left: 0;
 }
+@media screen and (max-width: 599px) {
+  .wpcf7-form .type .wpcf7-list-item {
+    display: block;
+    margin-left: 0;
+  }
+}
 .wpcf7-form .type .wpcf7-list-item input {
   margin: 0;
 }
@@ -250,8 +261,15 @@ img {
 }
 .breadcrumbs__inner {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
   padding: 1rem 0;
+}
+@media screen and (max-width: 599px) {
+  .breadcrumbs__inner {
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 
 .header {
@@ -263,11 +281,17 @@ img {
 }
 .header__inner {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
   align-items: center;
   display: flex;
   gap: 5rem;
   padding: 1rem 0;
+}
+@media screen and (max-width: 599px) {
+  .header__inner {
+    padding: 1rem 0.5rem;
+  }
 }
 .header__title {
   font-size: 0;
@@ -297,8 +321,9 @@ img {
   width: 100%;
 }
 .header__list a {
-  color: #191919;
+  color: #333;
   display: block;
+  font-family: "Reem Kufi", sans-serif;
   padding-bottom: 1rem;
   text-decoration: none;
 }
@@ -318,6 +343,11 @@ img {
 .detail__wrap {
   padding: 5rem 0 10rem;
 }
+@media screen and (max-width: 599px) {
+  .detail__wrap {
+    padding-top: 3rem;
+  }
+}
 .detail__wrap ul {
   list-style-type: none;
 }
@@ -327,14 +357,26 @@ img {
 }
 .detail__inner {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
   display: flex;
   gap: 1rem;
   justify-content: space-between;
   margin-bottom: 10rem;
 }
+@media screen and (max-width: 599px) {
+  .detail__inner {
+    display: block;
+    width: 95%;
+  }
+}
 .detail__imageWrap {
   width: calc(45% - 1rem);
+}
+@media screen and (max-width: 599px) {
+  .detail__imageWrap {
+    width: 95%;
+  }
 }
 .detail__imageThumbList {
   display: flex;
@@ -344,6 +386,12 @@ img {
   cursor: pointer;
   height: 90px;
   width: 90px;
+}
+@media screen and (max-width: 599px) {
+  .detail__imageThumbItem {
+    height: 60px;
+    width: 60px;
+  }
 }
 .detail__imageThumbItem img {
   border-radius: 50%;
@@ -359,6 +407,11 @@ img {
 .detail__profileWrap {
   width: 55%;
 }
+@media screen and (max-width: 599px) {
+  .detail__profileWrap {
+    width: 95%;
+  }
+}
 .detail__profileHeader {
   align-items: flex-end;
   display: flex;
@@ -372,17 +425,19 @@ img {
   line-height: 1.2;
   text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 5px 0 #2b2845;
 }
+@media screen and (max-width: 599px) {
+  .detail__profileName {
+    font-size: 2rem;
+  }
+}
 .is--flan .detail__profileName {
   text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 5px 0 #191970;
 }
 .detail__profileName--en {
   font-family: "Reem Kufi", sans-serif;
+  color: #333;
   font-size: 2rem;
   line-height: 1;
-  text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845;
-}
-.is--flan .detail__profileName--en {
-  text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970;
 }
 .detail__profileNameWrap {
   color: #fff;
@@ -417,6 +472,7 @@ img {
   margin-bottom: 1rem;
 }
 .detail__profileComment {
+  font-size: 2rem;
   font-weight: bold;
   margin-bottom: 3rem;
 }
@@ -455,6 +511,7 @@ img {
 }
 .detail__profilePickupTitle {
   color: #fff;
+  font-family: "Reem Kufi", sans-serif;
   font-size: 3rem;
   margin-bottom: 2rem;
   text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 4px 0 #2b2845;
@@ -482,8 +539,9 @@ img {
 }
 
 .footer {
-  background: #28253c;
+  background: #333;
   color: #fff;
+  font-family: "Reem Kufi", sans-serif;
   font-size: 1.8rem;
   padding: 2rem 0;
   text-align: center;

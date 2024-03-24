@@ -63,7 +63,7 @@
 			</section>
 		</div>
 	</div>
-	<div class="detail__backBtn"><a href="<?= home_url("/#talent"); ?>">TALENTS一覧に戻る</a></div>
+	<div class="detail__backBtn"><a href="<?= home_url("/#talent"); ?>">HEROINE一覧に戻る</a></div>
 </section>
 <?php endwhile; ?>
 

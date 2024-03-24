@@ -3,6 +3,10 @@
 .news {
   &__wrap {
     margin-bottom: 8rem;
+
+    @include responsive($deviseSP) {
+      margin-bottom: 5rem;
+    }
   }
 
   &__title {
@@ -57,6 +61,7 @@
 
   &__list {
     display: flex;
+    flex-wrap: wrap;
     gap: 5rem;
   }
 
@@ -64,6 +69,10 @@
     cursor: pointer;
     text-align: center;
     width: calc((100% - 10rem) / 3);
+
+    @include responsive($deviseSP) {
+      width: calc((100% - 5rem) / 2);
+    }
 
     a {
       color: #191919;
@@ -77,6 +86,12 @@
     &:hover {
       img {
         opacity: 0.8;
+      }
+    }
+
+    &Name  {
+      &--en {
+        font-family: "Reem Kufi", sans-serif;
       }
     }
 
@@ -100,9 +115,19 @@
     @include section_title();
   }
 
+  &__list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5rem;
+  }
+
   &__item {
     cursor: pointer;
     width: calc((100% - 10rem) / 3);
+
+    @include responsive($deviseSP) {
+      width: calc((100% - 5rem) / 2);
+    }
 
     a {
       color: #191919;

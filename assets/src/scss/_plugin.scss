@@ -31,12 +31,16 @@
         margin-left: 0;
       }
 
+      @include responsive($deviseSP) {
+        display: block;
+        margin-left: 0;
+      }
+
       input {
         margin: 0;
 
         &[type="radio"] {
           margin-right: 0.5rem;
-
         }
       }
     }
@@ -74,6 +78,11 @@
     @include inner();
 
     padding: 1rem 0;
+
+    @include responsive($deviseSP) {
+      margin: 0 auto;
+      width: 95%;
+    }
   }
 }
 

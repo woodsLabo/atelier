@@ -1,6 +1,7 @@
 $deviseSP: 599px;
 
 @mixin section_title() {
+  font-family: "Reem Kufi", sans-serif;
   font-size: 3rem;
   margin-bottom: 2rem;
   text-align: center;
@@ -8,12 +9,17 @@ $deviseSP: 599px;
 
 @mixin inner() {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
 }
 
 @mixin section_wrap() {
   margin: -8.5rem 0 8rem;
   padding-top: 8.5rem;
+
+  @include responsive($deviseSP) {
+    margin-bottom: 5rem;
+  }
 }
 
 @mixin responsive($devise) {

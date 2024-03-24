@@ -1,5 +1,5 @@
 <section class="talent__wrap" id="talent">
-	<h2 class="talent__title">TALENTS</h2>
+	<h2 class="talent__title">HEROINE</h2>
 	<div class="talent__list">
 		<?php
 			$talent = wp_query("talents");

@@ -44,8 +44,8 @@ body {
   -webkit-font-smoothing: antialiased;
   -webkit-text-size-adjust: 100%;
   /*word-break:break-all;*/
-  color: #3e3e3e;
-  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  color: #333;
+  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "Lato JP", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 100;
@@ -164,6 +164,11 @@ img {
   background: rgba(204, 204, 204, 0.3);
   padding: 15rem 0 10rem;
 }
+@media screen and (max-width: 599px) {
+  .main {
+    padding: 11rem 0 3rem;
+  }
+}
 .main__image {
   margin-bottom: 5rem;
 }
@@ -177,7 +182,7 @@ img {
 
 .inner {
   margin: 0 auto;
-  width: 850px;
+  width: min(95%, 850px);
 }
 
 .archive__wrap {
@@ -217,6 +222,12 @@ img {
 .wpcf7-form .type .wpcf7-list-item.first {
   margin-left: 0;
 }
+@media screen and (max-width: 599px) {
+  .wpcf7-form .type .wpcf7-list-item {
+    display: block;
+    margin-left: 0;
+  }
+}
 .wpcf7-form .type .wpcf7-list-item input {
   margin: 0;
 }
@@ -250,8 +261,15 @@ img {
 }
 .breadcrumbs__inner {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
   padding: 1rem 0;
+}
+@media screen and (max-width: 599px) {
+  .breadcrumbs__inner {
+    margin: 0 auto;
+    width: 95%;
+  }
 }
 
 .header {
@@ -263,11 +281,17 @@ img {
 }
 .header__inner {
   margin: 0 auto;
+  max-width: 100%;
   width: 120rem;
   align-items: center;
   display: flex;
   gap: 5rem;
   padding: 1rem 0;
+}
+@media screen and (max-width: 599px) {
+  .header__inner {
+    padding: 1rem 0.5rem;
+  }
 }
 .header__title {
   font-size: 0;
@@ -297,8 +321,9 @@ img {
   width: 100%;
 }
 .header__list a {
-  color: #191919;
+  color: #333;
   display: block;
+  font-family: "Reem Kufi", sans-serif;
   padding-bottom: 1rem;
   text-decoration: none;
 }
@@ -311,8 +336,9 @@ img {
 }
 
 .footer {
-  background: #28253c;
+  background: #333;
   color: #fff;
+  font-family: "Reem Kufi", sans-serif;
   font-size: 1.8rem;
   padding: 2rem 0;
   text-align: center;
