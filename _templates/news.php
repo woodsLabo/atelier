@@ -12,7 +12,7 @@
 			while ($wp_query->have_posts()): $wp_query->the_post();
 		?>
 				<li class="news__item">
-					<time datetime="<?php the_time( get_option( 'date_format' ) ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time><a href=""><?php the_title(); ?></a>
+					<time datetime="<?php the_time( get_option( 'date_format' ) ); ?>"><?php the_time( get_option( 'date_format' ) ); ?></time><a href="<?php the_permalink(); ?>"><?php the_title(); ?></a>
 				</li>
 		<?php
 			endwhile;
@@ -20,12 +20,4 @@
 		?>
 
 	</ul>
-<ul>
-    <?php
-    $args = array(
-        'title_li' => ''
-    );
-    wp_list_categories($args);
-    ?>
-</ul>
 </section>

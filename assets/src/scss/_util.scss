@@ -1,3 +1,5 @@
+$deviseSP: 599px;
+
 @mixin section_title() {
   font-size: 3rem;
   margin-bottom: 2rem;
@@ -7,4 +9,15 @@
 @mixin inner() {
   margin: 0 auto;
   width: 120rem;
+}
+
+@mixin section_wrap() {
+  margin: -8.5rem 0 8rem;
+  padding-top: 8.5rem;
+}
+
+@mixin responsive($devise) {
+  @media screen and (max-width: $devise) {
+    @content
+  }
 }

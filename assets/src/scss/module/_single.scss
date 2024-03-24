@@ -2,6 +2,13 @@
 
 $mainColor: #28253c;
 
+.single {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
 .detail {
   &__wrap {
     padding: 5rem 0 10rem;

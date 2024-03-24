@@ -126,7 +126,8 @@ input, select {
 }
 
 input[type=text],
-input[type=email] {
+input[type=email],
+input[type=tel] {
   margin: 0;
   padding: 1rem;
   background: #fff;
@@ -153,15 +154,25 @@ img {
   vertical-align: top;
 }
 
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
 .main {
   background: rgba(204, 204, 204, 0.3);
-  padding: 15rem 0;
+  padding: 15rem 0 10rem;
 }
 .main__image {
   margin-bottom: 5rem;
 }
 .main__image img {
   width: 100%;
+}
+.main--single {
+  font-size: 1.8rem;
+  padding: 15rem 0 10rem;
 }
 
 .inner {
@@ -177,41 +188,51 @@ img {
   text-align: center;
 }
 
-.mw_wp_form .label {
+.footer {
+  margin-top: auto;
+}
+
+.wpcf7-form .label {
   font-size: 2rem;
   font-weight: bold;
   margin-bottom: 0.5rem;
 }
-.mw_wp_form .label span {
+.wpcf7-form .label span {
   color: #f00;
   display: inline-block;
   font-size: 1.5rem;
   margin-left: 1rem;
 }
-.mw_wp_form .name,
-.mw_wp_form .mail,
-.mw_wp_form .tel,
-.mw_wp_form .company,
-.mw_wp_form .type {
+.wpcf7-form .name,
+.wpcf7-form .mail,
+.wpcf7-form .tel,
+.wpcf7-form .company,
+.wpcf7-form .type {
   margin-bottom: 2rem;
   width: 100%;
 }
-.mw_wp_form .type {
+.wpcf7-form .type {
   font-size: 1.8rem;
 }
-.mw_wp_form .type input {
+.wpcf7-form .type .wpcf7-list-item.first {
+  margin-left: 0;
+}
+.wpcf7-form .type .wpcf7-list-item input {
   margin: 0;
 }
-.mw_wp_form .type span {
+.wpcf7-form .type .wpcf7-list-item input[type=radio] {
+  margin-right: 0.5rem;
+}
+.wpcf7-form .type span {
   display: inline-block;
   vertical-align: middle;
 }
-.mw_wp_form .message {
+.wpcf7-form .message {
   border-radius: 1rem;
   width: 100%;
   margin-bottom: 4rem;
 }
-.mw_wp_form .submit {
+.wpcf7-form .submit {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   border: 0;
   border-radius: 4rem;
@@ -250,32 +271,43 @@ img {
 }
 .header__title {
   font-size: 0;
-  width: 180px;
+  width: 18rem;
 }
 .header__title img {
-  width: 100%;
   height: auto;
 }
 .header__nav {
-  margin-left: auto;
+  margin: 1rem 0 0 auto;
 }
 .header__list {
   display: flex;
   gap: 3rem;
 }
-.header__list li:hover {
-  border-bottom: 3px solid #000;
+.header__list li {
+  position: relative;
+}
+.header__list li:hover a:after {
+  background: #000;
+  bottom: 0;
+  content: "";
+  display: block;
+  height: 3px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 .header__list a {
   color: #191919;
+  display: block;
+  padding-bottom: 1rem;
   text-decoration: none;
 }
 .header__list a :active {
   color: #191919;
 }
 .header__snsWrap img {
-  width: 15px;
   height: auto;
+  width: 1.5rem;
 }
 
 .footer {

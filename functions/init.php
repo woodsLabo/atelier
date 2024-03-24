@@ -36,4 +36,12 @@ function addHeadAssets() {
 	}
 }
 add_action("wp_enqueue_scripts", "addHeadAssets");
+
+function addFooterAssets() {
+	if (is_singular("talents")) {
+		wp_enqueue_script("singleJs", get_template_directory_uri() . "/assets/dist/js/singleJs.js");
+	}
+}
+
+add_action("wp_footer", "addFooterAssets");
 ?>

@@ -18,16 +18,15 @@
 
   &__title {
     font-size: 0;
-    width: 180px;
+    width: 18rem;
 
     img {
-      width: 100%;
       height: auto;
     }
   }
 
   &__nav {
-    margin-left: auto;
+    margin: 1rem 0 0 auto;
   }
 
   &__list {
@@ -35,13 +34,28 @@
     gap: 3rem;
 
     li {
+      position: relative;
+
       &:hover {
-        border-bottom: 3px solid #000;
+        a {
+          &:after {
+            background: #000;
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+          }
+        }
       }
     }
 
     a {
       color: #191919;
+      display: block;
+      padding-bottom: 1rem;
       text-decoration: none;
 
       :active {
@@ -54,8 +68,8 @@
   // TODO: 要調整
   &__snsWrap {
     img {
-      width: 15px;
       height: auto;
+      width: 1.5rem;
     }
   }
 }

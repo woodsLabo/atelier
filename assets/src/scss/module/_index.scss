@@ -34,7 +34,7 @@
 
 .about {
   &__wrap {
-    margin-bottom: 8rem;
+    @include section_wrap();
   }
 
   &__title {
@@ -48,7 +48,7 @@
 
 .talent {
   &__wrap {
-    margin-bottom: 8rem;
+    @include section_wrap();
   }
 
   &__title {
@@ -93,7 +93,7 @@
 
 .goods {
   &__wrap {
-    margin-bottom: 8rem;
+    @include section_wrap();
   }
 
   &__title {
@@ -134,6 +134,11 @@
 }
 
 .contact {
+  &__wrap {
+    margin-top: -8.5rem;
+    padding-top: 8.5rem;
+  }
+
   &__title {
     @include section_title();
   }
