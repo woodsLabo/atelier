@@ -347,12 +347,23 @@ img {
 .link__list {
   list-style-type: none;
 }
+.link__item {
+  text-align: center;
+}
 .link__item:not(:last-of-type) {
   margin-bottom: 4rem;
 }
-.link__item a {
-  display: block;
+.link__itemLink {
+  background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+  border-radius: 4rem;
+  color: #fff;
+  display: inline-block;
+  font-size: 2rem;
+  margin: 4rem auto 0;
+  min-width: 400px;
+  padding: 2rem 5rem;
+  text-decoration: none;
 }
-.link__item a:hover {
+.link__itemLink:hover {
   opacity: 0.8;
 }

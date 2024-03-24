@@ -9,7 +9,10 @@
 			<ul class="link__list">
 				<?php foreach($link_group as $link) : ?>
 					<li class="link__item">
-						<a href="<?= $link["url"] ?>" target="_blank"><img src="<?= wp_get_attachment_image_src($link["image"], "full")[0]; ?>" alt=""></a>
+						<div>
+							<img src="<?= wp_get_attachment_image_src($link["image"], "full")[0]; ?>" alt="">
+						</div>
+						<a href="<?= $link["url"]; ?>" target="_blank" class="link__itemLink"><?= $link["text"]; ?></a>
 					</li>
 				<?php endforeach; ?>
 			</ul>

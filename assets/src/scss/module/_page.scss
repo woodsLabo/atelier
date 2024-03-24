@@ -4,12 +4,22 @@
   }
 
   &__item {
+    text-align: center;
+
     &:not(:last-of-type) {
       margin-bottom: 4rem;
     }
 
-    a {
-      display: block;
+    &Link {
+      background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+      border-radius: 4rem;
+      color: #fff;
+      display: inline-block;
+      font-size: 2rem;
+      margin: 4rem auto 0;
+      min-width: 400px;
+      padding: 2rem 5rem;
+      text-decoration: none;
 
       &:hover {
         opacity: 0.8;
