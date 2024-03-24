@@ -1,7 +1,6 @@
 <?php
 	get_header();
 	$link_group = SCF::get_option_meta("theme-link", "link_items");
-	var_dump($link_group);
 ?>
 <main class="main">
 	<div class="inner">
