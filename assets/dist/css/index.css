@@ -366,6 +366,9 @@ img {
 .news__item a:hover {
   text-decoration: underline;
 }
+.news__emptyText {
+  text-align: center;
+}
 
 .about__wrap {
   margin: -8.5rem 0 8rem;
