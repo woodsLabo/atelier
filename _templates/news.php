@@ -1,6 +1,6 @@
 <?php ob_start(); ?>
 <section class="news__wrap">
-	<h2 class="news__title">NEWS</h2>
+	<h2 class="news__title">NEWS<span class="news__title--jp">お知らせ</span></h2>
 	<ul class="news__list">
 		<?php
 			$args = array(

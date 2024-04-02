@@ -6,7 +6,7 @@ $logo_url = create_image_path("global", "logo");
 $sns_group = SCF::get_option_meta("theme-global", "sns_group");
 ?>
 <div class="wrapper">
-	<header class="header">
+	<header class="header js-header">
 		<div class="header__inner">
 			<h1 class="header__title">
 				<a href="<?= home_url(); ?>"><img src="<?= $logo_url; ?>" alt="logo"></a>
@@ -22,5 +22,6 @@ $sns_group = SCF::get_option_meta("theme-global", "sns_group");
 						<a href="<?= $sns["url"] ?>" target="_blank"><img src="<?= $icon_url[0]; ?>" alt=""></a>
 				<?php endforeach; ?>
 			</div>
+			<div class="header__humBtn js-humBtn"></div>
 		</div>
 	</header>

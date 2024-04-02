@@ -1,5 +1,5 @@
 <section class="goods__wrap" id="goods">
-	<h2 class="goods__title">GOODS</h2>
+	<h2 class="goods__title">GOODS<span class="contact__title--jp">楽曲・グッズ・ボイス etc</span></h2>
 	<div class="goods__list">
 		<?php
 			$good = wp_query("goods");

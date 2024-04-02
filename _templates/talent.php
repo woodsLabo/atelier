@@ -1,8 +1,8 @@
-<section class="talent__wrap" id="talent">
-	<h2 class="talent__title">HEROINE</h2>
+<section class="talent__wrap" id="heroine">
+	<h2 class="talent__title">HEROINE<span class="talent__title--jp">所属ヒロイン</span></h2>
 	<div class="talent__list">
 		<?php
-			$talent = wp_query("talents");
+			$talent = wp_query("heroine");
 			while ($talent->have_posts()): $talent->the_post();
 		?>
 			<div class="talent__item">

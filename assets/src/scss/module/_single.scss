@@ -14,7 +14,7 @@ $mainColor: #28253c;
     padding: 5rem 0 10rem;
 
     @include responsive($deviseSP) {
-      padding-top: 3rem;
+      padding: 3rem 0 5rem;;
     }
 
     ul {
@@ -37,6 +37,7 @@ $mainColor: #28253c;
 
     @include responsive($deviseSP) {
       display: block;
+      margin-bottom: 5rem;
       width: 95%;
     }
   }
@@ -46,7 +47,7 @@ $mainColor: #28253c;
       width: calc(45% - 1rem);
 
       @include responsive($deviseSP) {
-        width: 95%;
+        width: 100%;
       }
     }
 
@@ -100,6 +101,10 @@ $mainColor: #28253c;
 
     &Icon {
       width: 7rem;
+
+      @include responsive($deviseSP) {
+        width: 4rem;
+      }
     }
 
     &Name {
@@ -109,9 +114,14 @@ $mainColor: #28253c;
 
       @include responsive($deviseSP) {
         font-size: 2rem;
+        text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 3px 0 #2b2845;
       }
       .is--flan & {
         text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 5px 0 #191970;
+
+        @include responsive($deviseSP) {
+          text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 3px 0 #191970;
+        }
       }
 
       &--en {
@@ -161,22 +171,24 @@ $mainColor: #28253c;
       }
     }
 
-    &Position {
-      font-size: 1.8rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
-    }
-
     &Comment {
-      font-size: 2rem;
+      font-size: 1.7rem;
       font-weight: bold;
       margin-bottom: 3rem;
+
+      @include responsive($deviseSP) {
+        font-size: 1.5rem;
+      }
     }
 
     &List {
       border: 1px solid $mainColor;
       text-align: center;
       width: calc(100% / 2 - 1rem);
+
+      @include responsive($deviseSP) {
+        width: 100%;
+      }
 
       &Wrap {
         display: flex;
@@ -224,6 +236,12 @@ $mainColor: #28253c;
 
         }
       }
+
+      iframe {
+        @include responsive($deviseSP) {
+          width: 100%;
+        }
+      }
     }
   }
 
@@ -238,6 +256,11 @@ $mainColor: #28253c;
       font-size: 2rem;
       padding: 2rem 5rem;
       text-decoration: none;
+
+      @include responsive($deviseSP) {
+        font-size: 1.5rem;
+        padding: 1.5rem 5rem;
+      }
 
       &:active {
         color: #fff;

@@ -1,10 +1,27 @@
 $deviseSP: 599px;
 
 @mixin section_title() {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
   font-family: "Reem Kufi", sans-serif;
   font-size: 3rem;
-  margin-bottom: 2rem;
+  margin-bottom: 3rem;
   text-align: center;
+}
+
+@mixin section_title_jp() {
+  display: inline-block;
+  font-size: 1.7rem;
+
+  &::before {
+    background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+    content: "";
+    display: block;
+    height: 0.3rem;
+    margin: 0 auto 0.5rem;
+    width: 5rem;
+  }
 }
 
 @mixin inner() {
@@ -18,7 +35,8 @@ $deviseSP: 599px;
   padding-top: 8.5rem;
 
   @include responsive($deviseSP) {
-    margin-bottom: 5rem;
+    margin: -6rem 0 5rem;
+    padding-top: 6rem;
   }
 }
 

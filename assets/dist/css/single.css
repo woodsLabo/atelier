@@ -14,6 +14,11 @@ html {
   font-size: 62.5%;
   scroll-padding-top: 85px;
 }
+@media screen and (max-width: 599px) {
+  html {
+    scroll-padding-top: 60px;
+  }
+}
 
 html.wf-active,
 html.loading-delay {
@@ -290,12 +295,20 @@ img {
 }
 @media screen and (max-width: 599px) {
   .header__inner {
-    padding: 1rem 0.5rem;
+    display: block;
+    position: relative;
   }
 }
 .header__title {
   font-size: 0;
   width: 18rem;
+}
+@media screen and (max-width: 599px) {
+  .header__title {
+    margin: 0 auto;
+    text-align: center;
+    width: 30%;
+  }
 }
 .header__title img {
   height: auto;
@@ -303,15 +316,37 @@ img {
 .header__nav {
   margin: 1rem 0 0 auto;
 }
+@media screen and (max-width: 599px) {
+  .header__nav {
+    background: #fff;
+    margin-top: 0;
+    padding-top: 2rem;
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translateX(100%);
+    transition: all 0.5s ease;
+    width: 70%;
+  }
+  .is-open .header__nav {
+    transform: translateX(0);
+  }
+}
 .header__list {
   display: flex;
   gap: 3rem;
 }
+@media screen and (max-width: 599px) {
+  .header__list {
+    flex-direction: column;
+    padding-left: 2rem;
+  }
+}
 .header__list li {
   position: relative;
 }
-.header__list li:hover a:after {
-  background: #000;
+.header__list li:hover a::after {
+  background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   bottom: 0;
   content: "";
   display: block;
@@ -319,6 +354,11 @@ img {
   left: 0;
   position: absolute;
   width: 100%;
+}
+@media screen and (max-width: 599px) {
+  .header__list li:hover a::after {
+    display: none;
+  }
 }
 .header__list a {
   color: #333;
@@ -334,6 +374,26 @@ img {
   height: auto;
   width: 1.5rem;
 }
+@media screen and (max-width: 599px) {
+  .header__snsWrap {
+    display: none;
+  }
+}
+@media screen and (max-width: 599px) {
+  .header__humBtn {
+    background: url(../76529b74133db71f89cb.svg);
+    content: "";
+    cursor: pointer;
+    height: 4rem;
+    position: absolute;
+    right: 1rem;
+    top: 1rem;
+    width: 4rem;
+  }
+  .is-open .header__humBtn {
+    background: url(../c6c4e5361f559bbea824.svg);
+  }
+}
 
 .single__wrapper {
   display: flex;
@@ -345,7 +405,7 @@ img {
 }
 @media screen and (max-width: 599px) {
   .detail__wrap {
-    padding-top: 3rem;
+    padding: 3rem 0 5rem;
   }
 }
 .detail__wrap ul {
@@ -367,6 +427,7 @@ img {
 @media screen and (max-width: 599px) {
   .detail__inner {
     display: block;
+    margin-bottom: 5rem;
     width: 95%;
   }
 }
@@ -375,7 +436,7 @@ img {
 }
 @media screen and (max-width: 599px) {
   .detail__imageWrap {
-    width: 95%;
+    width: 100%;
   }
 }
 .detail__imageThumbList {
@@ -420,6 +481,11 @@ img {
 .detail__profileIcon {
   width: 7rem;
 }
+@media screen and (max-width: 599px) {
+  .detail__profileIcon {
+    width: 4rem;
+  }
+}
 .detail__profileName {
   font-size: 4rem;
   line-height: 1.2;
@@ -428,10 +494,16 @@ img {
 @media screen and (max-width: 599px) {
   .detail__profileName {
     font-size: 2rem;
+    text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 3px 0 #2b2845;
   }
 }
 .is--flan .detail__profileName {
   text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 5px 0 #191970;
+}
+@media screen and (max-width: 599px) {
+  .is--flan .detail__profileName {
+    text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 3px 0 #191970;
+  }
 }
 .detail__profileName--en {
   font-family: "Reem Kufi", sans-serif;
@@ -466,20 +538,25 @@ img {
 .is--flan .detail__profileMainWrap {
   box-shadow: 0 0 0 5px rgba(0, 206, 209, 0.5);
 }
-.detail__profilePosition {
-  font-size: 1.8rem;
-  font-weight: bold;
-  margin-bottom: 1rem;
-}
 .detail__profileComment {
-  font-size: 2rem;
+  font-size: 1.7rem;
   font-weight: bold;
   margin-bottom: 3rem;
+}
+@media screen and (max-width: 599px) {
+  .detail__profileComment {
+    font-size: 1.5rem;
+  }
 }
 .detail__profileList {
   border: 1px solid #28253c;
   text-align: center;
   width: calc(50% - 1rem);
+}
+@media screen and (max-width: 599px) {
+  .detail__profileList {
+    width: 100%;
+  }
 }
 .detail__profileListWrap {
   display: flex;
@@ -519,6 +596,11 @@ img {
 .is--flan .detail__profilePickupTitle {
   text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 4px 0 #191970;
 }
+@media screen and (max-width: 599px) {
+  .detail__profilePickup iframe {
+    width: 100%;
+  }
+}
 .detail__backBtn {
   text-align: center;
 }
@@ -530,6 +612,12 @@ img {
   font-size: 2rem;
   padding: 2rem 5rem;
   text-decoration: none;
+}
+@media screen and (max-width: 599px) {
+  .detail__backBtn a {
+    font-size: 1.5rem;
+    padding: 1.5rem 5rem;
+  }
 }
 .detail__backBtn a:active {
   color: #fff;
