@@ -13,7 +13,6 @@ class Header {
   }
 
   scroller() {
-    console.log(this.scorrllLinks.length);
     this.scorrllLinks.forEach((scorrllLink) => {
       scorrllLink.addEventListener("click", (e) => {
         const hrefLink = scorrllLink.getAttribute("href");
@@ -23,7 +22,6 @@ class Header {
           const rectTop = targetContent.getBoundingClientRect().top;
           const positionY = window.pageYOffset;
           const spacer = this.header.classList.contains("is-open") ? 60 : 85;
-          console.log(spacer);
           const target = rectTop + positionY - spacer ;
           window.scrollTo({
             top: target,

@@ -1,7 +1,7 @@
 /*!**********************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/src/scss/single.scss ***!
   \**********************************************************************************************************************/
-@import url(https://fonts.googleapis.com/css2?family=Lato:wght@100;300;400;700&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&display=swap);
 /*!**************************************************************************************************************************!*\
   !*** css ./node_modules/css-loader/dist/cjs.js!./node_modules/sass-loader/dist/cjs.js!./assets/src/scss/single.scss (1) ***!
   \**************************************************************************************************************************/
@@ -50,7 +50,7 @@ body {
   -webkit-text-size-adjust: 100%;
   /*word-break:break-all;*/
   color: #333;
-  font-family: "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "Lato JP", "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
   font-style: normal;
   font-weight: 100;
@@ -540,7 +540,6 @@ img {
 }
 .detail__profileComment {
   font-size: 1.7rem;
-  font-weight: bold;
   margin-bottom: 3rem;
 }
 @media screen and (max-width: 599px) {

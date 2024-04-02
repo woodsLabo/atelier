@@ -38,7 +38,7 @@ function addHeadAssets() {
 add_action("wp_enqueue_scripts", "addHeadAssets");
 
 function addFooterAssets() {
-	wp_enqueue_script("singleJs", get_template_directory_uri() . "/assets/dist/js/headerJs.js");
+	wp_enqueue_script("headerJs", get_template_directory_uri() . "/assets/dist/js/headerJs.js");
 	if (is_singular("heroine")) {
 		wp_enqueue_script("singleJs", get_template_directory_uri() . "/assets/dist/js/singleJs.js");
 	}

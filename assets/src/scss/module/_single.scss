@@ -173,7 +173,6 @@ $mainColor: #28253c;
 
     &Comment {
       font-size: 1.7rem;
-      font-weight: bold;
       margin-bottom: 3rem;
 
       @include responsive($deviseSP) {
