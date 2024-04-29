@@ -1,0 +1,48 @@
+$deviseSP: 599px;
+
+@mixin section_title() {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+@mixin section_title_jp() {
+  display: inline-block;
+  font-family: initial;
+  font-size: 1.4rem;
+
+  &::before {
+    background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+    content: "";
+    display: block;
+    height: 0.3rem;
+    margin: 0 auto 0.7rem;
+    width: 5rem;
+  }
+}
+
+@mixin inner() {
+  margin: 0 auto;
+  max-width: 100%;
+  width: 120rem;
+}
+
+@mixin section_wrap() {
+  margin: -8.5rem 0 8rem;
+  padding-top: 8.5rem;
+
+  @include responsive($deviseSP) {
+    margin: -6rem 0 5rem;
+    padding-top: 6rem;
+  }
+}
+
+@mixin responsive($devise) {
+  @media screen and (max-width: $devise) {
+    @content
+  }
+}

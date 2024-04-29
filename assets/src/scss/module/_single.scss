@@ -1,0 +1,273 @@
+@use "../_util" as *;
+
+$mainColor: #28253c;
+
+.single {
+  &__wrapper {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.detail {
+  &__wrap {
+    padding: 5rem 0 10rem;
+
+    @include responsive($deviseSP) {
+      padding: 3rem 0 5rem;;
+    }
+
+    ul {
+      list-style-type: none;
+    }
+
+    img {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__inner {
+    @include inner();
+
+    display: flex;
+    gap: 1rem;
+    justify-content: space-between;
+    margin-bottom: 10rem;
+
+    @include responsive($deviseSP) {
+      display: block;
+      margin-bottom: 5rem;
+      width: 95%;
+    }
+  }
+
+  &__image {
+    &Wrap {
+      width: calc(45% - 1rem);
+
+      @include responsive($deviseSP) {
+        width: 100%;
+      }
+    }
+
+    &Thumb {
+      &List {
+        display: flex;
+        gap: 2rem;
+      }
+
+      &Item {
+        cursor: pointer;
+        height: 90px;
+        width: 90px;
+
+        @include responsive($deviseSP) {
+          height: 60px;
+          width: 60px;
+        }
+
+        img {
+          border-radius: 50%;
+        }
+      }
+
+      &Main {
+        display: none;
+      }
+
+      &Voice {
+        cursor: pointer;
+        height: 90px;
+        width: 90px;
+      }
+    }
+  }
+
+  &__profile {
+    &Wrap {
+      width: 55%;
+
+      @include responsive($deviseSP) {
+        width: 95%;
+      }
+    }
+
+    &Header {
+      align-items: flex-end;
+      display: flex;
+      gap: 1rem;
+    }
+
+    &Icon {
+      width: 7rem;
+
+      @include responsive($deviseSP) {
+        width: 4rem;
+      }
+    }
+
+    &Name {
+      font-size: 4rem;
+      line-height: 1.2;
+      text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 5px 0 #2b2845;
+
+      @include responsive($deviseSP) {
+        font-size: 2rem;
+        text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 3px 0 #2b2845;
+      }
+      .is--flan & {
+        text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 5px 0 #191970;
+
+        @include responsive($deviseSP) {
+          text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 3px 0 #191970;
+        }
+      }
+
+      &--en {
+        font-family: "Reem Kufi", sans-serif;
+        color: #333;
+        font-size: 2rem;
+        line-height: 1;
+        // text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845;
+
+        .is--flan & {
+          // text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970;
+        }
+      }
+
+      &Wrap {
+        color: #fff;
+        z-index: 1;
+      }
+    }
+
+    &Sns {
+      &List {
+        display: flex;
+        gap: 1rem;
+        margin: 1rem 0 0.2rem auto;
+      }
+
+      &Item {
+        border-radius: 50%;
+        height: 4rem;
+        overflow: hidden;
+        width: 4rem;
+      }
+    }
+
+    &MainWrap {
+      box-shadow: 0 0 0 5px rgba(123, 28, 77, 0.5);
+      box-sizing: border-box;
+      color: #333;
+      margin: 1rem 0 4rem;
+      padding: 2rem 1rem;
+      transform: translate(0.8rem, 0);
+      width: calc(100% - 0.8rem);
+
+      .is--flan & {
+        box-shadow: 0 0 0 5px rgba(0, 206, 209, 0.5);
+      }
+    }
+
+    &Comment {
+      font-size: 1.7rem;
+      margin-bottom: 3rem;
+
+      @include responsive($deviseSP) {
+        font-size: 1.5rem;
+      }
+    }
+
+    &List {
+      border: 1px solid $mainColor;
+      text-align: center;
+      width: calc(100% / 2 - 1rem);
+
+      @include responsive($deviseSP) {
+        width: 100%;
+      }
+
+      &Wrap {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 2rem;
+      }
+    }
+
+    &Team {
+      background: $mainColor;
+      color: #fff;
+      font-weight: bold;
+      padding: 1rem 0;
+      text-align: center;
+
+      .is--flan & {
+        background: #1c1861;
+      }
+    }
+
+    &Desc {
+      padding: 1rem 0;
+    }
+
+    &Pickup {
+      box-shadow: 0 0 0 5px rgba(123, 28, 77, 0.5);
+      padding: 2rem 1rem;
+      text-align: center;
+      transform: translate(0.8rem, 0);
+      width: calc(100% - 0.8rem);
+
+      .is--flan & {
+        box-shadow: 0 0 0 5px rgba(0, 206, 209, 0.5);
+      }
+
+      &Title {
+        color: #fff;
+        font-family: "Reem Kufi", sans-serif;
+        font-size: 3rem;
+        margin-bottom: 2rem;
+          text-shadow: 1px 0 #2b2845, -1px 0 #2b2845, 0 -1px #2b2845, 0 1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 1px 1px #2b2845, -1px 1px #2b2845, 1px -1px #2b2845, -1px -1px #2b2845, 3px 4px 0 #2b2845;
+
+        .is--flan & {
+          text-shadow: 1px 0 #191970, -1px 0 #191970, 0 -1px #191970, 0 1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 1px 1px #191970, -1px 1px #191970, 1px -1px #191970, -1px -1px #191970, 3px 4px 0 #191970;
+
+        }
+      }
+
+      iframe {
+        @include responsive($deviseSP) {
+          width: 100%;
+        }
+      }
+    }
+  }
+
+  &__backBtn {
+    text-align: center;
+
+    a {
+      background: linear-gradient(to right, rgb(5, 14 , 142), rgb(15, 74, 256));
+      border-radius: 4rem;
+      color: #fff;
+      display: inline-block;
+      font-size: 2rem;
+      padding: 2rem 5rem;
+      text-decoration: none;
+
+      @include responsive($deviseSP) {
+        font-size: 1.5rem;
+        padding: 1.5rem 5rem;
+      }
+
+      &:active {
+        color: #fff;
+      }
+
+      &:hover {
+        opacity: 0.8;
+      }
+    }
+  }
+}

@@ -1,0 +1,88 @@
+@use "./_util" as *;
+
+.wpcf7-form {
+  .label {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+
+    span {
+      color: #f00;
+      display: inline-block;
+      font-size: 1.5rem;
+      margin-left: 1rem;
+    }
+  }
+
+  .name,
+  .mail,
+  .tel,
+  .company,
+  .type {
+    margin-bottom: 2rem;
+    width: 100%;
+  }
+
+  .type {
+    font-size: 1.8rem;
+
+    .wpcf7-list-item {
+      &.first {
+        margin-left: 0;
+      }
+
+      @include responsive($deviseSP) {
+        display: block;
+        margin-left: 0;
+      }
+
+      input {
+        margin: 0;
+
+        &[type="radio"] {
+          margin-right: 0.5rem;
+        }
+      }
+    }
+
+    span {
+      display: inline-block;
+      vertical-align: middle;
+    }
+  }
+
+  .message {
+    border-radius: 1rem;
+    width: 100%;
+    margin-bottom: 4rem;
+  }
+
+  .submit {
+    background: linear-gradient(to right, rgb(5, 14 , 142), rgb(15, 74, 256));
+    border: 0;
+    border-radius: 4rem;
+    box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+    color: #fff;
+    display: block;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin: auto;
+    padding: 1rem 4rem;
+  }
+}
+
+.breadcrumbs {
+  padding-top: 10rem;
+
+  &__inner {
+    @include inner();
+
+    padding: 1rem 0;
+
+    @include responsive($deviseSP) {
+      margin: 0 auto;
+      width: 95%;
+    }
+  }
+}
+

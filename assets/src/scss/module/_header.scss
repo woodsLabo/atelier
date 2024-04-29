@@ -1,0 +1,133 @@
+@use "../_util" as *;
+
+.header {
+  background: #fff;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.16);
+  position: fixed;
+  width: 100%;
+  z-index: 2;
+
+  &__inner {
+    @include inner();
+
+    align-items: center;
+    display: flex;
+    gap: 5rem;
+    padding: 1rem 0;
+
+    @include responsive($deviseSP) {
+      display: block;
+      position: relative;
+    }
+  }
+
+  &__title {
+    font-size: 0;
+    width: 18rem;
+
+    @include responsive($deviseSP) {
+      margin: 0 auto;
+      text-align: center;
+      width: 30%;
+    }
+
+    img {
+      height: auto;
+    }
+  }
+
+  &__nav {
+    margin: 1rem 0 0 auto;
+
+    @include responsive($deviseSP) {
+      background: #fff;
+      margin-top: 0;
+      padding-top: 2rem;
+      position: absolute;
+      right: 0;
+      top: 0;
+      transform: translateX(100%);
+      transition: all 0.5s ease;
+      width: 70%;
+
+      .is-open & {
+        transform: translateX(0);
+      }
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 3rem;
+
+    @include responsive($deviseSP) {
+      flex-direction: column;
+      padding-left: 2rem;
+    }
+
+    li {
+      position: relative;
+
+      &:hover {
+        a {
+          &::after {
+            background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+            bottom: 0;
+            content: "";
+            display: block;
+            height: 3px;
+            left: 0;
+            position: absolute;
+            width: 100%;
+
+            @include responsive($deviseSP) {
+              display: none;
+            }
+          }
+        }
+      }
+    }
+
+    a {
+      color: #333;
+      display: block;
+      font-family: "Reem Kufi", sans-serif;
+      padding-bottom: 1rem;
+      text-decoration: none;
+
+      :active {
+        color: #191919;
+      }
+    }
+  }
+
+  &__snsWrap {
+    img {
+      height: auto;
+      width: 1.5rem;
+    }
+
+    @include responsive($deviseSP) {
+      display: none;
+    }
+  }
+
+  @include responsive($deviseSP) {
+    &__hum {
+      &Btn {
+        background: url(../images/open.svg);
+        content: "";
+        cursor: pointer;
+        height: 4rem;
+        position: absolute;
+        right: 1rem;
+        top: 1rem;
+        width: 4rem;
+
+        .is-open & {
+          background: url(../images/close.svg);
+        }
+      }
+    }
+  }
+}
