@@ -4,6 +4,7 @@
 ?>
 <main class="main">
 	<div class="inner">
+		<h2 class="page__title"><?php the_title(); ?><br><span class="page__title--sub"><?= the_field("title_sub") ?></span></h2>
 		<section class="link__wrap">
 			<ul class="link__list">
 				<?php foreach($link_group as $link) : ?>

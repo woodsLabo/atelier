@@ -4,8 +4,10 @@ include_once("functions/util.php");
 
 $logo_url = create_image_path("global", "logo");
 $sns_group = SCF::get_option_meta("theme-global", "sns_group");
+
+$has_bg = !is_single() ? " has__bg" : "";
 ?>
-<div class="wrapper">
+<div class="wrapper<?= $has_bg; ?>">
 	<header class="header js-header">
 		<div class="header__inner">
 			<h1 class="header__title">

@@ -166,7 +166,6 @@ img {
 }
 
 .main {
-  background: rgba(204, 204, 204, 0.3);
   padding: 15rem 0 10rem;
 }
 @media screen and (max-width: 599px) {
@@ -200,6 +199,10 @@ img {
 
 .footer {
   margin-top: auto;
+}
+
+.has__bg {
+  background: rgba(204, 204, 204, 0.3);
 }
 
 .wpcf7-form .label {
@@ -268,7 +271,7 @@ img {
   margin: 0 auto;
   max-width: 100%;
   width: 120rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 @media screen and (max-width: 599px) {
   .breadcrumbs__inner {
@@ -291,7 +294,7 @@ img {
   align-items: center;
   display: flex;
   gap: 5rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 @media screen and (max-width: 599px) {
   .header__inner {
