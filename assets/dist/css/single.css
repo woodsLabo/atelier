@@ -635,5 +635,42 @@ img {
   font-family: "Reem Kufi", sans-serif;
   font-size: 1.8rem;
   padding: 2rem 0;
+}
+.footer__inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.footer__list {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+}
+@media screen and (max-width: 599px) {
+  .footer__list {
+    align-items: center;
+    flex-direction: column;
+  }
+}
+.footer__list li {
+  line-height: 0.8;
+  padding-right: 1rem;
+}
+.footer__list li:not(:last-of-type) {
+  border-right: 1px solid #fff;
+}
+@media screen and (max-width: 599px) {
+  .footer__list li:not(:last-of-type) {
+    border-right: 0;
+  }
+}
+.footer__list a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.footer__list a:hover {
+  text-decoration: none;
+}
+.footer__copy {
   text-align: center;
 }
