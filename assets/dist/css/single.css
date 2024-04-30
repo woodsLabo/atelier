@@ -642,27 +642,15 @@ img {
   padding: 0 1rem;
 }
 .footer__list {
-  display: flex;
-  gap: 1rem;
   margin-bottom: 2rem;
-}
-@media screen and (max-width: 599px) {
-  .footer__list {
-    align-items: center;
-    flex-direction: column;
-  }
+  text-align: center;
 }
 .footer__list li {
   line-height: 0.8;
   padding-right: 1rem;
 }
 .footer__list li:not(:last-of-type) {
-  border-right: 1px solid #fff;
-}
-@media screen and (max-width: 599px) {
-  .footer__list li:not(:last-of-type) {
-    border-right: 0;
-  }
+  margin-bottom: 1rem;
 }
 .footer__list a {
   color: #fff;

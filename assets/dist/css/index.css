@@ -417,16 +417,16 @@ img {
 }
 .news__title--jp {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 }
 .news__title--jp::before {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   content: "";
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0 auto 0.7rem;
-  width: 5rem;
+  width: 8rem;
 }
 .news__list {
   list-style-type: none;
@@ -470,16 +470,16 @@ img {
 }
 .about__title--jp {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 }
 .about__title--jp::before {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   content: "";
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0 auto 0.7rem;
-  width: 5rem;
+  width: 8rem;
 }
 .about__text {
   text-align: center;
@@ -506,16 +506,16 @@ img {
 }
 .talent__title--jp {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 }
 .talent__title--jp::before {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   content: "";
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0 auto 0.7rem;
-  width: 5rem;
+  width: 8rem;
 }
 .talent__list {
   display: flex;
@@ -576,16 +576,16 @@ img {
 }
 .goods__title--jp {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 }
 .goods__title--jp::before {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   content: "";
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0 auto 0.7rem;
-  width: 5rem;
+  width: 8rem;
 }
 .goods__list {
   display: flex;
@@ -637,16 +637,16 @@ img {
 }
 .contact__title--jp {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 }
 .contact__title--jp::before {
   background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
   content: "";
   display: block;
-  height: 0.3rem;
+  height: 0.4rem;
   margin: 0 auto 0.7rem;
-  width: 5rem;
+  width: 8rem;
 }
 
 .footer {
@@ -662,27 +662,15 @@ img {
   padding: 0 1rem;
 }
 .footer__list {
-  display: flex;
-  gap: 1rem;
   margin-bottom: 2rem;
-}
-@media screen and (max-width: 599px) {
-  .footer__list {
-    align-items: center;
-    flex-direction: column;
-  }
+  text-align: center;
 }
 .footer__list li {
   line-height: 0.8;
   padding-right: 1rem;
 }
 .footer__list li:not(:last-of-type) {
-  border-right: 1px solid #fff;
-}
-@media screen and (max-width: 599px) {
-  .footer__list li:not(:last-of-type) {
-    border-right: 0;
-  }
+  margin-bottom: 1rem;
 }
 .footer__list a {
   color: #fff;
