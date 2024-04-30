@@ -166,7 +166,6 @@ img {
 }
 
 .main {
-  background: rgba(204, 204, 204, 0.3);
   padding: 15rem 0 10rem;
 }
 @media screen and (max-width: 599px) {
@@ -200,6 +199,10 @@ img {
 
 .footer {
   margin-top: auto;
+}
+
+.has__bg {
+  background: rgba(204, 204, 204, 0.3);
 }
 
 .wpcf7-form .label {
@@ -268,7 +271,7 @@ img {
   margin: 0 auto;
   max-width: 100%;
   width: 120rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 @media screen and (max-width: 599px) {
   .breadcrumbs__inner {
@@ -291,7 +294,7 @@ img {
   align-items: center;
   display: flex;
   gap: 5rem;
-  padding: 1rem 0;
+  padding: 1rem;
 }
 @media screen and (max-width: 599px) {
   .header__inner {
@@ -401,7 +404,58 @@ img {
   font-family: "Reem Kufi", sans-serif;
   font-size: 1.8rem;
   padding: 2rem 0;
+}
+.footer__inner {
+  margin: 0 auto;
+  max-width: 1200px;
+  padding: 0 1rem;
+}
+.footer__list {
+  margin-bottom: 2rem;
   text-align: center;
+}
+.footer__list li {
+  line-height: 0.8;
+  padding-right: 1rem;
+}
+.footer__list li:not(:last-of-type) {
+  margin-bottom: 1rem;
+}
+.footer__list a {
+  color: #fff;
+  font-size: 1.5rem;
+}
+.footer__list a:hover {
+  text-decoration: none;
+}
+.footer__copy {
+  text-align: center;
+}
+
+.page__title {
+  display: flex;
+  flex-direction: column;
+  font-family: "Reem Kufi", sans-serif;
+  font-size: 3rem;
+  margin-bottom: 8rem;
+  text-align: center;
+}
+.page__title--sub {
+  font-family: initial;
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  position: relative;
+}
+.page__title--sub::before {
+  background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+  content: "";
+  height: 0.4rem;
+  left: 0;
+  margin: auto;
+  position: absolute;
+  right: 0;
+  top: -1rem;
+  width: 8rem;
 }
 
 .link__list {

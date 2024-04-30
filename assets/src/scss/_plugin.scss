@@ -77,7 +77,7 @@
   &__inner {
     @include inner();
 
-    padding: 1rem 0;
+    padding: 1rem;
 
     @include responsive($deviseSP) {
       margin: 0 auto;

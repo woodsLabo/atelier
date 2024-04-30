@@ -34,6 +34,7 @@ $mainColor: #28253c;
     gap: 1rem;
     justify-content: space-between;
     margin-bottom: 10rem;
+    padding: 0 1rem;
 
     @include responsive($deviseSP) {
       display: block;

@@ -12,16 +12,16 @@ $deviseSP: 599px;
 
 @mixin section_title_jp() {
   display: inline-block;
-  font-family: initial;
+  font-family: "Lato JP", "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Meiryo, Osaka, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 1.4rem;
 
   &::before {
     background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
     content: "";
     display: block;
-    height: 0.3rem;
+    height: 0.4rem;
     margin: 0 auto 0.7rem;
-    width: 5rem;
+    width: 8rem;
   }
 }
 
