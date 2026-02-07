@@ -5,7 +5,7 @@
 			$good = wp_query("goods");
 			while ($good->have_posts()): $good->the_post();
 
-			$terms = get_terms("goods_category");
+			$terms = get_the_terms($post->ID, "goods_category");
 			$term = $terms[0];
 		?>
 			<div class="goods__item">

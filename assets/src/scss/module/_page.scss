@@ -1,5 +1,35 @@
 @use "../_util" as *;
 
+.page {
+  &__title {
+    display: flex;
+    flex-direction: column;
+    font-family: "Reem Kufi", sans-serif;
+    font-size: 3rem;
+    margin-bottom: 8rem;
+    text-align: center;
+
+    &--sub {
+      font-family: initial;
+      font-size: 1.4rem;
+      margin-top: 1rem;
+      position: relative;
+
+      &::before {
+        background: linear-gradient(to right, rgb(5, 14, 142), rgb(15, 74, 255));
+        content: "";
+        height: 0.4rem;
+        left: 0;
+        margin: auto;
+        position: absolute;
+        right: 0;
+        top: -1rem;
+        width: 8rem;
+      }
+    }
+  }
+}
+
 .link {
   &__list {
     list-style-type: none;
