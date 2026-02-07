@@ -16,8 +16,9 @@ $mainColor: #28253c;
   }
 
   &__list {
-    // display: flex;
-    // gap: 1rem;
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
     margin-bottom: 2rem;
     text-align: center;
 
@@ -28,15 +29,15 @@ $mainColor: #28253c;
 
     li {
       line-height: 0.8;
-      padding-right: 1rem;
+      // padding-right: 1rem;
 
-      &:not(:last-of-type) {
-        // border-right: 1px solid #fff;
-        margin-bottom: 1rem;
-        //   @include responsive($deviseSP) {
-        //     border-right: 0;
-        //   }
-      }
+      // &:not(:last-of-type) {
+      // border-right: 1px solid #fff;
+      // margin-bottom: 1rem;
+      //   @include responsive($deviseSP) {
+      //     border-right: 0;
+      //   }
+      // }
     }
 
     a {
