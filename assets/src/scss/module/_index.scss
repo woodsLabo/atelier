@@ -123,7 +123,8 @@
   }
 }
 
-.goods {
+// .goods,
+.event {
   &__wrap {
     @include section_wrap();
   }
@@ -137,14 +138,18 @@
   }
 
   &__list {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 5rem;
+    // display: flex;
+    // flex-wrap: wrap;
+    // gap: 5rem;
   }
 
   &__item {
+    // width: calc((100% - 10rem) / 3); goods用
+    width: 90%; // event用
+    max-width: 800px; // event用
+    margin-inline: auto; // event用
+    text-align: center;
     cursor: pointer;
-    width: calc((100% - 10rem) / 3);
 
     @include responsive($deviseSP) {
       width: calc((100% - 5rem) / 2);
@@ -176,6 +181,21 @@
   &__moreLink {
     margin-top: 2rem;
     text-align: right;
+  }
+
+  &__past {
+    &-list {
+      margin-top: 50px;
+      list-style-type: none;
+    }
+
+    &-item {
+      margin-inline: 10px;
+
+      img {
+        height: auto;
+      }
+    }
   }
 }
 

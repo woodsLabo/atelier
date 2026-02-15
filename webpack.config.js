@@ -6,6 +6,7 @@ module.exports = {
   entry: {
     "singleJs": path.resolve(__dirname, "./assets/src/js/Single.js"),
     "headerJs": path.resolve(__dirname, "./assets/src/js/Header.js"),
+    "slickJs": path.resolve(__dirname, "./assets/src/js/slick.js"),
     "index": path.resolve(__dirname, "./assets/src/scss/index.scss"),
     "archive": path.resolve(__dirname, "./assets/src/scss/archive.scss"),
     "single": path.resolve(__dirname, "./assets/src/scss/single.scss"),
