@@ -1,0 +1,1 @@
+$((function(){$(".slick").slick({autoplay:!0,autoplaySpeed:0,speed:1e4,cssEase:"linear",slidesToShow:3,swipe:!1,arrows:!1,pauseOnFocus:!1,pauseOnHover:!1})}));

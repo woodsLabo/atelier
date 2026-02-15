@@ -14,7 +14,7 @@
 			include_once("_templates/news.php");
 			include_once("_templates/about.php");
 			include_once("_templates/talent.php");
-			include_once("_templates/goods.php");
+			include_once("_templates/event.php");
 			include_once("_templates/contact.php");
 		?>
 	</div>
