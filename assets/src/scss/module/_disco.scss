@@ -1,0 +1,276 @@
+@use "../util" as *;
+
+@mixin title() {
+  font-family: "trajan-pro-3", sans-serif;
+  font-size: 2.6rem;
+  font-weight: bold;
+
+  @include responsive($deviseSP) {
+    font-size: 2.2rem;
+  }
+}
+
+.discography {
+  &__wrap {
+    position: relative;
+    padding-block: 10rem 4rem;
+    color: #fff;
+    text-shadow: 2px 2px 2px rgba(0 0 0 / 100%);
+
+    &::before {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      content: "";
+      background-color: rgba(0 0 0 / 50%);
+      backdrop-filter: blur(5px);
+      -webkit-backdrop-filter: blur(5px);
+    }
+  }
+
+  &__header {
+    position: relative;
+    margin-bottom: 6rem;
+    text-align: center;
+
+    @include responsive($deviseSP) {
+      margin-bottom: 2rem;
+    }
+  }
+
+  &__thumb {
+    width: 70%;
+    margin: 0 auto 2rem;
+
+    @include responsive($deviseSP) {
+      width: 100%;
+    }
+
+    img {
+      width: 100%;
+    }
+  }
+
+  &__title {
+    font-size: 2rem;
+    font-weight: normal;
+
+    @include responsive($deviseSP) {
+      font-size: 1.6rem;
+    }
+  }
+
+  &__catch {
+    font-size: 2em;
+
+    @include responsive($deviseSP) {
+      font-size: 2.2rem;
+    }
+  }
+
+  &__content {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+    width: 60%;
+    margin: 0 auto 100px;
+
+    @include responsive($deviseSP) {
+      display: block;
+      width: 100%;
+      padding-inline: 1rem;
+      margin-bottom: 6rem;
+    }
+
+    &_image {
+      @include responsive($deviseSP) {
+        margin-bottom: 2rem;
+        text-align: center;
+      }
+
+      img {
+        width: 100%;
+
+        @include responsive($deviseSP) {
+          width: 60%;
+        }
+      }
+    }
+
+    &_def {
+      &_term {
+        margin-bottom: 1rem;
+        font-family: "trajan-pro-3", sans-serif;
+        font-weight: bold;
+        border-bottom: 1px solid #fff;
+      }
+
+      &_detail {
+        &:not(:last-of-type) {
+          margin-bottom: 2rem;
+        }
+
+        a {
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  &__track {
+    &_list {
+      position: relative;
+      margin-bottom: 4rem;
+
+      &_title {
+        @include title();
+
+        margin-bottom: 3rem;
+        text-align: center;
+
+        @include responsive($deviseSP) {
+          margin-bottom: 2rem;
+        }
+      }
+
+      &_unorder {
+        width: 35%;
+        margin-inline: auto;
+        list-style-type: none;
+
+        @include responsive($deviseSP) {
+          width: 100%;
+          padding-inline: 2rem;
+        }
+      }
+
+      &_item {
+        display: flex;
+        column-gap: 2rem;
+        counter-increment: trackcount;
+
+        @include responsive($deviseSP) {
+          column-gap: 1rem;
+        }
+
+        &:not(:last-of-type) {
+          margin-bottom: 3rem;
+        }
+
+        &::before {
+          display: block;
+          font-size: 20px;
+          font-weight: bold;
+          line-height: 1;
+          color: #3e3eff;
+          content: counter(trackcount, decimal-leading-zero);
+
+          @include responsive($deviseSP) {
+            font-size: 16px;
+          }
+        }
+      }
+
+      &_term {
+        margin-bottom: 1rem;
+        font-size: 2rem;
+        line-height: 1;
+
+        @include responsive($deviseSP) {
+          margin-bottom: 0.5rem;
+          font-size: 1.6rem;
+          line-height: 1.2;
+        }
+      }
+    }
+  }
+
+  &__movie {
+    position: relative;
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @include responsive($deviseSP) {
+      margin-bottom: 6rem;
+
+      iframe {
+        width: 90%;
+        height: auto;
+        aspect-ratio: 16 / 9;
+      }
+    }
+  }
+
+  &__credit {
+    position: relative;
+    margin-bottom: 10rem;
+    text-align: center;
+
+    @include responsive($deviseSP) {
+      margin-bottom: 4rem;
+    }
+
+    &_title {
+      @include title();
+
+      margin-bottom: 3rem;
+
+      @include responsive($deviseSP) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &_item {
+      font-size: 2.2rem;
+
+      &:not(:last-of-type) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &_term {
+      color: #3e3eff;
+
+      @include responsive($deviseSP) {
+        font-size: 1.6rem;
+      }
+    }
+
+    @include responsive($deviseSP) {
+      &_detail {
+        font-size: 1.6rem;
+      }
+    }
+  }
+
+  &__information {
+    position: relative;
+    text-align: center;
+
+    &_title {
+      @include title();
+
+      margin-bottom: 3rem;
+
+      @include responsive($deviseSP) {
+        margin-bottom: 2rem;
+      }
+    }
+
+    &_list {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 3rem;
+      width: 70%;
+      margin-inline: auto;
+      list-style-type: none;
+
+      img {
+        width: 100%;
+      }
+    }
+  }
+}

@@ -6,13 +6,14 @@ $logo_url = create_image_path("global", "logo");
 $sns_group = SCF::get_option_meta("theme-global", "sns_group");
 
 $has_bg = !is_single() ? " has__bg" : "";
+$title_el = is_home() || is_front_page() ? "h1" : "div";
 ?>
 <div class="wrapper<?= $has_bg; ?>">
 	<header class="header js-header">
 		<div class="header__inner">
-			<h1 class="header__title">
+			<<?= $title_el; ?> class="header__title">
 				<a href="<?= home_url(); ?>"><img src="<?= $logo_url; ?>" alt="logo"></a>
-			</h1>
+			</<?= $title_el; ?>>
 			<?php
 				include_once("_templates/nav.php");
 			?>
