@@ -1,9 +1,9 @@
 <?php
-function wp_query($post_type = null, $posts_per_page = -1) {
+function wp_query($post_type = null, $posts_per_page = -1, $order = "asc") {
 	$args = array(
 		'post_type' => $post_type,
 		'posts_per_page' => $posts_per_page,
-		'order' => 'asc'
+		'order' => $order
 	);
 
 	return new WP_Query($args);

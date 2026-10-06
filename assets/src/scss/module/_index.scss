@@ -83,9 +83,9 @@
   }
 
   &__item {
-    cursor: pointer;
-    text-align: center;
     width: calc((100% - 10rem) / 3);
+    text-align: center;
+    cursor: pointer;
 
     @include responsive($deviseSP) {
       width: calc((100% - 5rem) / 2);
@@ -106,24 +106,77 @@
       }
     }
 
-    &Name  {
+    &Name {
       &--en {
         font-family: "Reem Kufi", sans-serif;
       }
     }
 
     img {
-      border-radius: 50%;
-      box-shadow: 0 3px 6px 0 rgba(0, 0, 0, 0.16);
+      width: 100%;
       height: auto;
       margin-bottom: 1rem;
+      border-radius: 50%;
+      box-shadow: 0 3px 6px 0 rgba(0 0 0 / 16%);
       transition: all ease 0.5s;
-      width: 100%;
     }
   }
 }
 
-// .goods,
+.disco {
+  &__wrap {
+    @include section_wrap();
+  }
+
+  &__title {
+    @include section_title();
+
+    &--jp {
+      @include section_title_jp();
+    }
+  }
+
+  &__list {
+    display: flex;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 20px;
+    list-style-type: none;
+  }
+
+  &__item {
+    text-align: center;
+    cursor: pointer;
+
+    a {
+      color: #191919;
+      text-decoration: none;
+
+      &:active {
+        color: #191919;
+      }
+    }
+
+    &:hover {
+      img {
+        opacity: 0.8;
+      }
+    }
+
+    img {
+      width: 100%;
+      height: auto;
+      margin-bottom: 1rem;
+      transition: all ease 0.5s;
+    }
+  }
+
+  &__moreLink {
+    margin-top: 2rem;
+    text-align: right;
+  }
+}
+
 .event {
   &__wrap {
     @include section_wrap();
@@ -171,10 +224,10 @@
     }
 
     img {
+      width: 100%;
       height: auto;
       margin-bottom: 1rem;
       transition: all ease 0.5s;
-      width: 100%;
     }
   }
 
@@ -201,8 +254,8 @@
 
 .contact {
   &__wrap {
-    margin-top: -8.5rem;
     padding-top: 8.5rem;
+    margin-top: -8.5rem;
   }
 
   &__title {

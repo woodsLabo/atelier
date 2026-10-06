@@ -31,6 +31,8 @@ function addHeadAssets() {
 		wp_enqueue_style("slickTheme", "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css");
 	} elseif (is_archive()) {
 		wp_enqueue_style("archive", get_template_directory_uri() . "/assets/dist/css/archive.css");
+	} elseif (is_singular("discography")) {
+		wp_enqueue_style("disco", get_template_directory_uri() . "/assets/dist/css/disco.css");
 	} elseif (is_single()) {
 		wp_enqueue_style("single", get_template_directory_uri() . "/assets/dist/css/single.css");
 	} elseif (is_page()) {
